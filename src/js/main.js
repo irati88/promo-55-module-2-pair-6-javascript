@@ -2,26 +2,24 @@
 
 // 1. Mensaje de navegador obsoleto
 
-document.querySelector('h1').innerHTML
-console.log('Estás mostando el h1');
-
-
+document.querySelector("h1").innerHTML = "Esta página no es compatible con la versión actual de tu navegador. Por favor actualízalo a la versión más reciente";
+console.log('Estás mostrando el h1');
 
 // 2. Hola Mundo
 
-
+document.querySelector(".paragraph").innerHTML = "Hola Mundo";
+console.log('Estás cambiando el párrafo');
 
 // 3. Seleccionando Adalabers
 
-
-
 // 4. Lorem ipsum
-
 
 // 5. Arreglando errores
 
+// 6. Deshabilitando botones
 
-// Segunda parte//
+
+// EVENTOS//
 
 //1.-Cómo te llamas?//
 
@@ -35,7 +33,7 @@ botonSaludar.addEventListener('click', () => {
 });
 
 
-//2.- Cambia el estilo de un botón//
+// //2.- Cambia el estilo de un botón//
 
 const myButton = document.querySelector('.button');
 myButton.addEventListener("click", (event) => {
