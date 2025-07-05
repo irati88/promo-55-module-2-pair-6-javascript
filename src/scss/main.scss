@@ -5,3 +5,12 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'pages/index';
+
+
+.button {
+    background-color: blue;
+    color: white;
+}
+.active {
+    background-color: #4CAF50;
+}
