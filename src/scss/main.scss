@@ -14,3 +14,22 @@
 .active {
     background-color: #4CAF50;
 }
+
+button {
+    background-color: aquamarine;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 30px;
+}
+
+button:active {
+    filter: brightness(90%);
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 25px;
+}
