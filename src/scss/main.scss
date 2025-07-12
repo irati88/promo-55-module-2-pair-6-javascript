@@ -33,3 +33,21 @@ input {
     border-radius: 5px;
     padding: 25px;
 }
+
+.btn {
+    background-color: aquamarine;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn:active {
+     filter: brightness(90%);
+}
+
+h1 {
+    font-style: italic;
+}
