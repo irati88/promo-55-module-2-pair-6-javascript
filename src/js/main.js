@@ -15,6 +15,10 @@ console.log("Estás cambiando el párrafo");
 
 // 3. Seleccionando Adalabers
 
+const list = document.querySelector(".list");
+document.querySelector(".adalaber-two").classList.add("hidden");
+
+console.log("Estás seleccionando una persona de la lista");
 // 4. Lorem ipsum
 
 // 5. Arreglando errores
@@ -23,6 +27,8 @@ let myAddress = "Madrid, 28009";
 myAddress = "Valladolid, 47009";
 
 // 6. Deshabilitando botones
+
+document.querySelector(".second-button").style.opacity = "0.5";
 
 // EJERCICIOS EVENTOS//
 
@@ -51,7 +57,17 @@ myButton.addEventListener("click", (event) => {
 
 // 5.-  Estilo para un botón
 
+const submitButton = document.querySelector(".buttons");
+submitButton.addEventListener("click", (event) => {
+  document.querySelector(".buttons").style.backgroundColor = "red";
+
+  console.log("Estás cambiando el color de un botón");
+});
+
 // 6.- ¿Qué vemos esta noche?
+
+const theButton = document.querySelector(".start-button");
+const lists = document.querySelector("movie-list");
 
 const inception = "Inception";
 const theButterFlyEffect = "The butterfly effect";
@@ -59,15 +75,27 @@ const eternalSunshineOfTheSM = "Eternal sunshine of the spotless mind";
 const blueVelvet = "Blue velvet";
 const split = "Split";
 
+document.querySelector(".movie-list").innerHTML =
+  "<li>Inception</li><li>The butterfly effect</li><li>Eternal sunshine of the spotless mind</li><li>Blue velvet</li><li>Split</li>";
+theButton.addEventListener("click", () => {
+  console.log("Empezar");
+
+  list.innerHTML = "<li>" + inception + "</li>";
+  list.innerHTML = "<li>" + theButterFlyEffect + "</li>";
+  list.innerHTML = "<li>" + eternalSunshineOfTheSM + "</li>";
+  list.innerHTML = "<li>" + blueVelvet + "</li>";
+  list.innerHTML = "<li>" + split + "</li>";
+});
+
 // EJERCICIOS CONDICIONALES //
 
 // 1.- Control de acesso
 
 const input = document.querySelector("input");
 const p = document.querySelector("p");
-const button = document.querySelector(".alert");
+const access = document.querySelector(".alert");
 
-button.addEventListener("click", () => {
+access.addEventListener("click", () => {
   console.log("Has hecho click");
 
   const userName = input.value.toLowerCase();
@@ -105,6 +133,23 @@ const DEFAULT_AVATAR = "http://placehold.jp/150x150.png";
 let userAvatar = "http://www.fillmurray.com/300/300";
 
 // 4. Conversor de edad de perro a humano
+
+document.querySelector(".humanAge");
+document.querySelector("dogAge");
+
+const dogAge = 5;
+let humanAge;
+
+if (dogAge === 1);
+humanAge = 15;
+
+if ((dogAge = 2));
+humanAge = 9;
+
+if ((dogAge = 3));
+humanAge = dogAge * 5;
+
+console.log("dog age", dogAge);
 
 // 5. Recomendar de recetas
 

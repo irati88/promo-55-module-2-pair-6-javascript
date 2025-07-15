@@ -1,11 +1,18 @@
-@use 'core/reset';
-@use 'components/code';
-@use 'components/links';
-@use 'layout/page';
-@use 'layout/header';
-@use 'layout/footer';
-@use 'pages/index';
 
+
+.first-button {
+  padding: 10px;
+  color: white;
+  background-color: #030561;
+  border-radius: 1px;
+}
+
+.second-button {
+  padding: 10px;
+  color: white;
+  background-color: #030561;
+  border-radius: 1px;
+}
 
 .button {
     background-color: blue;
@@ -15,17 +22,42 @@
     background-color: #4CAF50;
 }
 
-button {
+.alert {
     background-color: aquamarine;
     color: black;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 30px;
+    padding: 8px 10px 8px 10px;
 }
 
 button:active {
     filter: brightness(90%);
+}
+
+.access-input {
+    border-color: blue;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.buttons {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; 
+}
+
+.start-button {
+
+  background-color: red;
+  color: black;
 }
 
 input {
