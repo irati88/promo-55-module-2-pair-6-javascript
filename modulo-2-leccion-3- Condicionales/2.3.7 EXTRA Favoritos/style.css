@@ -1,0 +1,19 @@
+.teachers {
+  list-style: none;
+  padding: 0;
+}
+
+.teacher {
+  display: inline-block;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.teacher__img {
+  width: 200px;
+  height: auto;
+}
+
+.teacher--selected {
+  background-color: antiquewhite;
+}

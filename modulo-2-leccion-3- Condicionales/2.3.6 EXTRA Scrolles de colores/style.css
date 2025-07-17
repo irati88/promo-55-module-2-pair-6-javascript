@@ -1,0 +1,9 @@
+.bg-low {
+    background-color: rgb(109, 230, 230);
+    color: rgb(83, 83, 83);
+}
+
+.bg-high {
+    background-color: rgb(255, 124, 124);
+     color: rgb(83, 83, 83);
+}
