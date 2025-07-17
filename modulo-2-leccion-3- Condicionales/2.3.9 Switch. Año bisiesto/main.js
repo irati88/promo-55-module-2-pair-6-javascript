@@ -1,3 +1,7 @@
+"use strict";
+
+console.log(">> Ready :");
+
 const currentYear = 2025;
 
 const nextLeapYear = currentYear + (4 - (currentYear % 4));

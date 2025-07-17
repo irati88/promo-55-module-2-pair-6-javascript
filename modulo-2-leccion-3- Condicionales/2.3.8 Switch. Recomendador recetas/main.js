@@ -1,3 +1,7 @@
+"use strict";
+
+console.log(">> Ready :");
+
 let ingredient = 'papas';
 
 if (ingredient === 'Pollo') {

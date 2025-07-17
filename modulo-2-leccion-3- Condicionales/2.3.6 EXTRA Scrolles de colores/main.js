@@ -1,3 +1,7 @@
+"use strict";
+
+console.log(">> Ready :");
+
 const content = document.querySelector('.content');
 
 content.classList.add('bg-low');

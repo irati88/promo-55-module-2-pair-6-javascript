@@ -1,3 +1,7 @@
+"use strict";
+
+console.log(">> Ready :");
+
 const teachers = document.querySelectorAll(".teacher");
 
 teachers.forEach(teacher => {

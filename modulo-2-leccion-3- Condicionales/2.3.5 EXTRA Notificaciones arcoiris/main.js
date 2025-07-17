@@ -1,3 +1,7 @@
+"use strict";
+
+console.log(">> Ready :");
+
 const notification = document.querySelector('.notification');
 const title = notification.querySelector('h2');
 const message = notification.querySelector('p');
