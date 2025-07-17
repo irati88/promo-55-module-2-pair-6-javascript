@@ -13,7 +13,7 @@ const pearsBasket = {
   }
 },
   decreasePears: () => {
-    if (numberOfPears > pearsBasket.min) {
+    if (pearsBasket.numberOfPears > pearsBasket.min) {
         pearsBasket.numberOfPears--;
     }
   },

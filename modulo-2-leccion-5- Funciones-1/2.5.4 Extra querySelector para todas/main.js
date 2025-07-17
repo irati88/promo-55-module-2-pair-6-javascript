@@ -8,7 +8,7 @@ function getEl(selector) {
 
 const btnEl = getEl(".btn");
 console.log(btnEl);
-btnEl.style.backgroundColor = "grey";
+btnEl.style.backgroundColor = "black";
 
 const h1El = getEl("h1");
 console.log(h1El);

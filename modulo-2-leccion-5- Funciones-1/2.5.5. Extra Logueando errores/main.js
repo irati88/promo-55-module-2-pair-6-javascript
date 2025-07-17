@@ -3,10 +3,12 @@
 console.log(">> Ready :");
 
 function getEl(selector) {
-    const el = document.querySelector(selector);
+    const element = document.querySelector(selector);
 
-    if (!el) {
-        console.error(`No existe ningún elemento con clase, id o tag llamado: ${selector}`);
+    if (element === null) {
+        console.error(`No existe ningún elemento con clase, id o tag llamado: ${selector}`)
     }
-    return el;
-}
+    return element;
+};
+const btnEl = getEl ('.btm');
+console.log(btnEl);
