@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Ejercicios de condicionales</title>
+</head>
+
+<body>
+
+    <!-- 3. Nadie sin avatar -->
+
+    <!-- Paso a paso:
+    1. Hagamos la lógica para añadir, desde javascript, la imagen userAvatar a la etiqueta de HTML img cuando cargue la página.
+    2. Ahora vamos a plantear que userAvatar pueda no contener una URL porque, por ejemplo, cuando la usuaria se registró no encontraba ninguna foto molona y decidió que la subiría en otro momento. Para ello tenemos que cambiar el contenido de userAvatar a comillas vacías let userAvatar = '';. ¡Ahora no debería verse ninguna imagen en la página!
+    3. Vamos a mejorar nuestro programa para que la ficha de usuario tenga una imagen sí o sí, de manera que:
+      - si tenemos el avatar de la usuaria se muestre este.
+      - si no tenemos datos del avatar de la usuaria, se muestre el avatar por defecto. -->
+
+
+    <div class="user">
+        <h1 class="user__name">Bill</h1>
+        <img class="user__avatar" alt="avatar usuario" />
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

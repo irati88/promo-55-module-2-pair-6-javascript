@@ -1,0 +1,17 @@
+.alert {
+  background-color: aquamarine;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 10px 8px 10px;
+}
+
+button:active {
+  filter: brightness(90%);
+}
+
+.access-input {
+  border-color: blue;
+  border-radius: 5px;
+  padding: 10px;
+}

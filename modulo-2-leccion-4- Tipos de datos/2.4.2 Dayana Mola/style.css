@@ -1,0 +1,13 @@
+.main {
+  background-color: pink;
+
+}
+
+.main__title {
+  color: red;
+}
+
+.super-wave {
+    color: black;
+    font-style: italic;
+}

@@ -1,7 +1,5 @@
 "use strict";
 
-// 4. Lorem ipsum
-
 const container = document.querySelector('.container');
 
 container.innerHTML = 

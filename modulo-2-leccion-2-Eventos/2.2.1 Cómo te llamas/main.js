@@ -1,7 +1,5 @@
 "use strict";
 
-//1.-Cómo te llamas?//
-
 const inputNombre = document.querySelector(".nameInput");
 const botonSaludar = document.querySelector(".helloBtn");
 const spanMessage = document.querySelector(".message");
