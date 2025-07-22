@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.label--book {
+    color: rgb(83, 83, 83);
+    font-weight: 400;    
+}
+
+.input--one { 
+    background-color: rgb(199, 199, 199);
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgb(83, 83, 83);
+}
+
+.input--two {
+    background-color: rgb(199, 199, 199);
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgb(83, 83, 83);
+}
+
+.button--book {
+    background-color: #14D4BD;
+    color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+.button--book:active {
+    filter: brightness(90%);
+}
+
+.paragraph--book{
+    color: rgb(83, 83, 83);
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
