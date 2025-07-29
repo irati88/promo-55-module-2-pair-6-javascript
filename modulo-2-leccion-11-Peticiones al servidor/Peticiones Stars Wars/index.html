@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peticiones al servidor de Stars Wars</title>
+  </head>
+  <body>
+    <!-- Ejercicio 1. Explorar el API Star Wars
+
+Vamos a explorar un API abierto de información sobre el mundo Star Wars (https://swapi.py4e.com/documentation). En esta página tenemos la documentación completa del API y un formulario que nos permite hacer peticiones a la URL que indiquemos. Identifica la siguiente información sobre SWAPI:
+
+* la URL base del API: https://swapi.py4e.com/api/
+* si necesita autenticación: OPEN
+* método HTTP que deben usar las peticiones a este API
+* URL para acceder a la info del personaje "Luke Skywalker"
+* URL para acceder a la info de la película "A New Hope"
+* a qué otros recursos puedo acceder desde el API además de personajes y pelis
+* URL para acceder al listado de personajes, ¿está paginada?
+* cómo puedo buscar personajes mediante la URL
+* cómo puedo hacer que el JSON de una petición se me devuelva traducido a Wookiee-->
+
+    <!-- Ejercicio 2. Buscar un personaje de Star Wars
+
+Ahora que conocemos mejor el API de Star Wars vamos a hacer una sencilla web usándolo. En la web aparece una caja de texto donde escribimos el nombre de un personaje (o parte del nombre) y un botón, al hacer click, nuestra web muestra debajo un listado con los personajes que coinciden con la búsqueda indicando su nombre y género.-->
+    <input class="input--search" type="text" />
+    <button class="button--search">Busca el personaje</button>
+    <ul class="list"></ul>
+
+    <!-- Ejercicio 3. Usando el DevTools
+
+En la página de SWAPI o en la que habéis creado en el ejercicio 2 inspecciona las peticiones que has hecho al servidor. Al abrir la pestaña Network aparece vacía así que comienza a hacer peticiones con la pestaña abierta. Con la información que obtienes de esta pestaña averigua:
+
+* dónde está el método de petición
+* el código de la respuesta (recuerda que 200 es OK)
+* en las cabeceras de la petición busca una llamada user-agent, ¿qué puedes decir de su contenido?
+* la respuesta del servidor en JSON
+* al recargar la página aparecen un montón de peticiones en la pestaña Network, ¿sabrías filtrar solo las que son de AJAX? Pista: antes de fetch las peticiones se hacían con el objeto XMLHttpRequest (XHR)  -->
+
+    <!-- Ejercicio 1. Conociendo Local Storage
+
+Escribir datos en formularios es muy tedioso para los usuarios. ¡Vamos a cachearlos para facilitarles la vida!
+
+* Prepara un input de texto para el nombre, un input de texto para los apellidos y un párrafo vacío
+* Cada vez que la usuaria escriba su nombre y apellidos (keyUp) tenemos que pintar el valor en el párrafo y guardarlo en localStorage.
+* Al recargar la página tenemos que consultar localStorage y, si hay algún nombre guardado, rellenar el input y el párrafo.
+* Mejora la forma de guardar los datos, queremos tener nuestros datos agrupaditos. El reto es guardar y recoger del localStorage un objeto con dos propiedades, nombre y apellido.-->
+
+    <!-- Ejercicio 2. Mi tema preferido
+
+Vamos a preparar una página sencilla, con un título, un par de párrafos y un selector de tema. Para hacer el selector:
+
+* Añadiremos dos radio buttons para poder elegir entre claro y oscuro.
+* Prepararemos dos clases de css: una pondrá el fondo claro y el texto oscuro, y la otra pondrá el fondo oscuro y el texto claro.
+* Aplicaremos a nuestra página una clase u otra según la selección de la usuaria, apoyándonos en el value del input seleccionado.
+* Paralelamente cada vez que la usuaria elija un tema, guardaremos esta información en localStorage.
+* Al cargar la página buscaremos en localStorage el tema seleccionado en la última visita y lo aplicaremos sin que la usuaria tenga que realizar ninguna acción.  -->
+
+    <!-- Ejercicio 3. Cachear la búsqueda
+
+Sobre el ejercicio 2. Buscar un personaje de Star Wars de la mini lección anterior cachea las búsquedas al servidor. De forma que cuando a busquemos una cadena a través del campo de búsqueda, primero busque en localStorage si ya tenemos un resultado en local para esa cadena:
+
+* Si no lo hay se pide al servidor y luego se guarda en localStorage usando como clave el texto de la búsqueda;
+* si al buscarlo en localStorage lo encontramos pues le enseñamos el resultado directamente al usuario y nos evitamos una petición al servidor. -->
+
+    <!-- Ejercicio Extra. Buenas prácticas trabajando con LS
+
+Partiendo del primer ejercicio de esta mini lección vamos a visitar la página y borraremos el valor del localStorage a través de las DevTools. Con el localStorage limpito, recargaremos la página para simular la primera visita de la usuaria, dónde aun no habría información sobre el nombre y apellidos guardada (cacheada).
+
+Si al realizar esta acción nos encontramos algún error tenemos que arreglarlo. Siempre que recojas un dato del localStorage, debes comprobar que existe antes de empezar a trabajar con el, y realizar una limpieza del localStorage manual para comprobar que todo funciona como esperas, haya o no datos cacheados. -->
+
+    <!-- Ejercicio 1. Dame gifs de gatetes
+
+Hay una api genial thecatapi.com de imágenes de gatetes, como estos seres son muy particulares y no se juntan con cualquiera tenemos que autenticarnos siempre que hacemos una petición. Pero es una autenticación sencilla, solo tenemos que registrarnos en la web, y nos mandarán al email un token que nos identifica, y que tendremos que añadir en todas las peticiones que hagamos.
+
+En Adalab ya nos hemos registrado y tenemos nuestro token. Te dejamos un ejemplo(https://codepen.io/adalab/pen/YJVZGJ), a partir del cual hay que:
+
+* Registrarse en la web y generar un token personal para sustituirlo por el de Adalab, que eso de impersonar a otros no es bonito.
+* Pintar la imagen aleatoria del gato que nos devuelve la petición.
+* ¡Espera! ¿Esto no iba de gifs? Vamos a ver si podemos hacer que la imagen que nos devuelve sea un gif.
+
+Nota: esta api es muy chachi, y una vez que nos autenticamos nos permite hacer cosas interesantes como guardar nuestras propias imágenes de gatetes, añadir a favoritos, eliminar nuestras imágenes... etc. Os animamos a leer la documentación y hacer diferentes pruebas con ella. -->
+
+    <script src="./main.js"></script>
+  </body>
+</html>
