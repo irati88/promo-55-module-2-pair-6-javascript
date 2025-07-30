@@ -3,38 +3,111 @@
 console.log(">>Po vamonoh mariviá>>");
 
 // Ejercicio 1
-console.log('Ejercicio 1')
+console.log("Ejercicio 1");
 const numbers = [1, 2, 3];
-const container = document.querySelector('.container');
+const container = document.querySelector(".container");
 
 numbers.forEach((number, i) => {
   const liOne = document.createElement("li");
-  const liOneContent = document.createTextNode("Númerico");   
-  liOne.appendChild(liOneContent); 
+  const liOneContent = document.createTextNode("Númerico");
+  liOne.appendChild(liOneContent);
   container.appendChild(liOne);
-  console.log(numbers)
+  console.log(numbers);
 });
 
-console.log('Ejercicio2')
-const select = document.querySelector('.select');
+// Ejercicio 2
+console.log("Ejercicio 2");
 
-const madrid = document.createElement('img')
-const paris = document.createElement('img')
-const newYork = document.createElement('img')
-const imgMadrid = ['https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/bltf44912aa75dee020/652e30b0f465d3b2e673b590/Madrid_LP_Header.webp?fit=crop&disable=upscale&auto=webp&quality=60&crop=smart&width=960&height=540',
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb8Zid7oqnkXMTQn7EIMx2Uos9c7CVOm58sQ&s" alt="Foto Madrid2',
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT89BNcAUgcGEGbYh96jTJJ6LEuM7uEBJw33w&s" alt="Foto Madrid3',
-]
-const imgParis = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjOi1QOHk4LrbTDHDObT879hLHJIqmcI3pfw&s',]
-const imgNewYork = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn8PQR9YQHQ1ZZq0uE0N5y6NwJMfk4Jz91Tw&s',
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmdLjxEvCKGkitXrWgXV6ZztQTKy9oqvZiew&s',
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuh16aNTbMQaNcmffOHl-J6HWX6QcyxhtBOQ&s',]
+const select = document.querySelector(".input--select");
+const containerImages = document.querySelector(".container--img");
 
-madrid.setAttribute('src', imgMadrid)
+const photosOfMadrid = [
+  "https://upload.wikimedia.org/wikipedia/commons/a/af/Plaza_Mayor_De_Madrid_%28215862629%29_edited.jpeg",
+  "https://upload.wikimedia.org/wikipedia/commons/d/df/Barajas_Airport_%28Madrid%29_%284684560779%29.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/a/ab/Madrid_May_2014-45a_edited.jpg",
+];
 
-select.addEventListener('click', () => {
-    if(value === 'Madrid'){
-        scr.imgMadrid
-    }
+const photosOfParis = [
+  "https://upload.wikimedia.org/wikipedia/commons/b/b3/Notre_Dame_%2839898572641%29.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/1/1b/Arcdetriomphe_2.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/a/a4/Paris_Opera_full_frontal_architecture%2C_May_2009_%28cropped%29.jpg",
+];
 
-})
+const photosOfNYC = [
+  "https://upload.wikimedia.org/wikipedia/commons/9/9d/NYC_Montage_2014_4_-_Jleon.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/6/67/Mulberry_Street_NYC_c1900_LOC_3g04637u_edit.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/0/0a/Central_Park_New_York_City_New_York_23_cropped.jpg",
+];
+
+const handleInput = () => {
+  console.log("Has hecho un cambio");
+  const city = select.value;
+  console.log("Ciudad", city);
+
+  //Borrar las imagenes del contenedor
+  const images = Array.from[containerImages.children];
+  if (images.length > 0) {
+    console.log("Borrar imágenes");
+    images.forEach((img) => img.remove());
+  }
+
+  if (city === "Madrid") {
+    photosOfMadrid.forEach((photo) => {
+      const img = document.createElement("img");
+      img.setAttribute("src", photo);
+      containerImages.appendChild(img);
+    });
+  } else if (city === "Paris") {
+    photosOfParis.forEach((photo) => {
+      const img = document.createElement("img");
+      img.setAttribute("src", photo);
+      containerImages.appendChild(img);
+    });
+  } else if (city === "Nueva York") {
+    photosOfNYC.forEach((photo) => {
+      const img = document.createElement("img");
+      img.setAttribute("src", photo);
+      containerImages.appendChild(img);
+    });
+  }
+};
+
+select.addEventListener("input", handleInput);
+
+// Ejercicio3
+console.log("Ejercicio 3");
+
+const data = [
+  {
+    name: "Ana",
+    lastName: "Corral",
+    phone: "111 111 111 111",
+  },
+  {
+    name: "Laura",
+    lastName: "Murray",
+    phone: "222 222 222 222",
+  },
+  {
+    name: "Silvia",
+    lastName: "Benitez",
+    phone: "333 333 333 333",
+  },
+];
+
+const inputName = document.querySelector(".input--name");
+const inputLastName = document.querySelector(".input--lastname");
+const inputPhone = document.querySelector(".input--tlf");
+const selectName = document.querySelector(".input--select--name");
+
+const handleInputName = () => {
+  const name = selectName.value;
+
+  const dataName = data.find((item) => item.name === name);
+
+  inputName.value = dataName.name;
+  inputLastName.value = dataName.lastName;
+  inputPhone.value = dataName.phone;
+};
+
+selectName.addEventListener("input", handleInputName);

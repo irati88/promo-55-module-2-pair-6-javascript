@@ -12,10 +12,11 @@
 
     <!-- Ejercicio2
  3 elementos con img, 1º html con el img, label, input type select, js escuchamos el select y saber qué elemento es seleccionado y mostar las 3 imagenes con su src añadiendo atributo, cuando recorra ese array creo las 3 img por cada vuelta con else if value=madrid talycualy -->
-    <div>
+   <div>
       <label for="select"
         >¿Cuál es tu ciudad favorita?
-        <select class="select">
+        <select class="input--select">
+          <option value="default">Escoge una ciudad</option>
           <option value="Madrid">Madrid</option>
           <option value="Paris">Paris</option>
           <option value="Nueva York">Nueva York</option>
@@ -26,6 +27,21 @@
 
     <!-- Ejercicio3 
  igual que antes pero en el select estan los 3 nombres-->
+
+ <label>Nombre</label>
+    <input class="input--name" placeholder="Nombre" />
+    <label>Apellido</label>
+    <input class="input--lastname" placeholder="Apellido" />
+    <label>Teléfono</label>
+    <input class="input--tlf" placeholder="Teléfono" />
+
+    <label>Elige una adalaber</label>
+    <select class="input--select--name">
+          <option value="default">Escoge una adalaber</option>
+          <option value="Ana">Ana</option>
+          <option value="Laura">Laura</option>
+          <option value="Silvia">Silvia</option>
+        </select>
 
     <script src="./main.js"></script>
   </body>
