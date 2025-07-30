@@ -45,7 +45,7 @@ const handleInput = () => {
   console.log("Ciudad", city);
 
   //Borrar las imagenes del contenedor
-  const images = Array.from[containerImages.children];
+  const images = Array.from(containerImages.children);
   if (images.length > 0) {
     console.log("Borrar imágenes");
     images.forEach((img) => img.remove());
